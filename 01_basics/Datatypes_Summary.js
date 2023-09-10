@@ -40,5 +40,5 @@ console.log(typeof outsideTemp);
 
 // ++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-// Stack (Primitive), Heap (Non-Primitive)
+// Stack (Primitive), Heap (Non-Primitive) 
 
