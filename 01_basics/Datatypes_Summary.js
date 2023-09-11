@@ -22,7 +22,7 @@ const bigNumber = 346784569889743434436784543n //automatically converted to bigI
 
 // Array, Objects, Functions
 
-const heroes = ["Shaktimaan","Naagraj","Doga"]; //Array
+/*const heroes = ["Shaktimaan","Naagraj","Doga"]; //Array
 let myObj = {
     name:"Xander",
     age:33,
@@ -33,7 +33,7 @@ const myFunction =  function(){
 }
 
 console.log(typeof bigNumber);
-console.log(typeof outsideTemp);
+console.log(typeof outsideTemp); */
 
 // https://262.ecma-international.org/5.1/#sec-11.4.3
 
@@ -42,3 +42,21 @@ console.log(typeof outsideTemp);
 
 // Stack (Primitive), Heap (Non-Primitive) 
 
+let myName = "XanderViskoii"
+
+let otherName = myName
+otherName = "RadheyRani"
+
+console.log(otherName);
+console.log(myName);
+
+let user1 = {
+    email: "usef@xander.com",
+    upi: "user@ybl"
+}
+let user2 = user1
+
+user2.email = "user@viskoii.com"
+
+console.log(user1.email);
+console.log(user2.email);
