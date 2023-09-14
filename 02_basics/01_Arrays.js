@@ -38,3 +38,4 @@ const myn2 = myArr.splice(1,3);
 console.log(myn2);
 console.log("C",myArr);
 //Slice V/s Splice : Splice manipulates the original array while slice just creates a deep copy
+//Splice  is example of shallow copy since it's using reference
