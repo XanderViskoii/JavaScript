@@ -25,12 +25,17 @@ console.log(typeof JsUser.mySym); */
 JsUser.email = "Xander@openai"
 //Object.freeze(JsUser)
 JsUser.email = "furkosian@terms" //This value did not propogate bcs object was feezed
-console.log(JsUser);
+// console.log(JsUser);
 
-//Functions can be treated as variables
+//Functions(type 1 citize in javascript) can be treated as variables
 JsUser.greetings = function(){
     console.log("Hello Js User");
 }
 
 console.log(JsUser.greetings());
+
+JsUser.greeting2 = function(){
+    console.log(`Hello JS user, ${this.name}`)
+}
+console.log(JsUser.greeting2());
 
