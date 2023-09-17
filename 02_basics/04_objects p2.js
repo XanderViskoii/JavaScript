@@ -46,10 +46,39 @@ const users = [
 ]
 
 users[1].email //Accesing 1 element of array which is object later (.) for accesing object 
-console.log(tinderUser);
+/*console.log(tinderUser);
 
 console.log(Object.keys(tinderUser)); //Datatype is array
 console.log(Object.values(tinderUser));
 console.log(Object.entries(tinderUser));
 
-console.log(tinderUser.hasOwnProperty('isLoggedin'));
+console.log(tinderUser.hasOwnProperty('isLoggedin')); */
+
+
+//++++++++++++++++++Destructuring+++++++++
+
+const course = {
+    coursename: "JS in hindi",
+    price : "999",
+    courseInstructor: "Xander"
+}
+//course.courseInstructor // If we have to use these values repeatedly then we can use another way to keep clean code
+
+const {courseInstructor: Instructor} = course
+
+//Now to access courseInstructors we can write:
+console.log(Instructor);
+
+//+++++++++++++++++++APIs Intro+++++++++++
+
+// {
+//     "name": "Xander",
+//     "coursename": "js in hindi"
+//     "price": "free"
+// }  //JSON even keys are string as above also similar to object but 
+//APIs in form of arrays consisting object
+[
+    {},
+    {} ,
+    {}
+]
