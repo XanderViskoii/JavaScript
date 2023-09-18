@@ -36,4 +36,28 @@ function LoginUserMessage(username = "Sam"){  //Sam is by default value
     return `${username} just logged in`
 }
 // console.log(LoginUserMessage("Xander"))
-console.log(LoginUserMessage())
+//console.log(LoginUserMessage())
+
+function calculateCartPrice(val1, val2, ...num1){ //rest or spread operator depends on which use case is that //Val1, Val2 are returning since functions returns only num1
+    return num1
+}
+//console.log(calculateCartPrice(200, 400, 500, 2000, 50000)); //Val1, Val2 are not returning since functions returns only num1. 200, 400 are val1 & val2 while others in num1
+const user = {
+    username: "Xander",
+    prices: 199
+}
+function handleObject(anyObject){
+    console.log(`Username is ${anyObject.username} and price is ${anyObject.price}`);
+}
+//handleObject(user)
+handleObject({
+    username : "samuel",
+    price: 399
+})
+const myNewArray = [200, 400, 100, 600]
+
+function returnSecondValue(getArray){
+    return getArray[1]
+}
+//console.log(returnSecondValue(myNewArray));
+console.log(returnSecondValue([300, 400, 60000, 500]));
