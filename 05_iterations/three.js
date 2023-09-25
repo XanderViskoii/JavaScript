@@ -34,6 +34,6 @@ const myObject = {
 
 // for (const [key,value] of myObject) {
 //     console.log(key, ':-', value);
-// } For loop does not work on objects
+// } For of loop does not work on objects
 
 
