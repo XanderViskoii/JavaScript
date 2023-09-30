@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Learning P3</title>
+</head>
+<body style="background-color: #191919;color: #f77;">
+    <ul class="language">
+        <li>JavaScript</li
+    </ul>
+</body>
+<script>
+    function addList(LangName) {
+        const li = document.createElement('li');
+        li.innerHTML = `${LangName}`
+        document.querySelector('.language').appendChild(li)
+    }
+    addList("Python")
+    addList('JAVA')
+
+/***********Optimised way of addList***/
+    function addOptiList(LangName) {
+        const li = document.createElement('li');
+        li.appendChild(document.createTextNode(LangName))
+        document.querySelector('.language').appendChild(li)
+    }
+    addOptiList('golang')
+
+    //Edit
+    
+
+</script>
+</html>
