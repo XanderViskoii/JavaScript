@@ -6,9 +6,9 @@
     <title>DOM Learning P3</title>
 </head>
 <body style="background-color: #191919;color: #f77;">
-    <ul class="language">
-        <li>JavaScript</li
-    </ul>
+    <ol class="language" style="background-color: rgba(3, 100, 244, 0.584);">
+        <li>JavaScript</li>
+    </ol>
 </body>
 <script>
     function addList(LangName) {
@@ -18,6 +18,8 @@
     }
     addList("Python")
     addList('JAVA')
+    addList('C++')
+
 
 /***********Optimised way of addList***/
     function addOptiList(LangName) {
@@ -26,9 +28,21 @@
         document.querySelector('.language').appendChild(li)
     }
     addOptiList('golang')
+    addOptiList('C#')
+///*****************Edit***************/
+    const SecondLang = document.querySelector("li:nth-child(2)")
+    // SecondLang.innerHTML = "MoJo"
+    const newLi = document.createElement('li')
+    newLi.textContent = "MoJo"
+    SecondLang.replaceWith(newLi)
 
-    //Edit
+///*****************Edit***************/
+    const firstLang= document.querySelector("li:first-child")
+    firstLang.outerHTML = '<li>TypeScript</li>'
+
+///***************Remove***************/
+    const lastLang = document.querySelector('li:last-child')
+    lastLang.remove() //c# removed
     
-
 </script>
 </html>
