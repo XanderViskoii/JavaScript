@@ -5,12 +5,12 @@
     background-color: #430cce66;
     padding-left: 30px;
   }
-  .light{
+  /* .light{
     background-color: lightcyan;
   }
   .dark{
     background-color: #212121;
-  }
+  } */
   #height,
   #weight {
     width: 150px;
