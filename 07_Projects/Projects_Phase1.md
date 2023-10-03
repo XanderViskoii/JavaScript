@@ -3,10 +3,10 @@
 ## Project Link
 [Click Here](https://github.com/XanderViskoii/JavaScript)
 
-# Solution Code
+# Solution Codes Of Projects
 
 ## Project 1
-
+### Solution:[Click Here For Project1 Source codes](https://github.com/XanderViskoii/JavaScript/blob/0a96f5f8ef4434dd5f5ad99126501e248774a596/07_Projects/1_ColourSwitcher)
 ```javascript
 console.log("Xander Viskoii")
 const buttons = document.querySelectorAll('.button');
@@ -38,7 +38,7 @@ buttons.forEach( function(button) {
 ```
 
 ## Project 2
-### Solution: 
+### Solution: [Click Here For Project2 Source codes](https://github.com/XanderViskoii/JavaScript/blob/0a96f5f8ef4434dd5f5ad99126501e248774a596/07_Projects/2_BMIIndex)
 ```JavaScript
 const form = document.querySelector('form');
 // this usecase below will give empty value
