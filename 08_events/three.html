@@ -14,14 +14,14 @@
     const sayDate = function(str){
         console.log(str, Date.now());
     }
- 
+    let intervalId
     document.querySelector('#Start').addEventListener('click',function(){
         setInterval(sayDate, 10000, "hi")
         console.log("started");
     })
     
     document.querySelector('#stop').addEventListener('click',function(){
-        const intervalId = setInterval(sayDate, 10000, "hi")
+        intervalId = setInterval(sayDate, 10000, "hi")
         clearInterval(intervalId);
         console.log("Stopped");
     })
