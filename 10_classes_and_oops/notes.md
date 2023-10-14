@@ -1,5 +1,5 @@
 # JavaScript and classes
-
++ JavaScript is prototype based language
 ## OOP
 
 ## Object
