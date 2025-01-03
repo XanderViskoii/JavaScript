@@ -18,3 +18,12 @@ console.log(accountId);
 Prefer not to use var because of issue in block scope and functional scope
 */
 console.table([accountId, accountEmail, accountPassword, accountCity, accountState])
+
+//var - global scope & can be reassigned
+//let - local scope & can be reassinged
+//const - local scope and can not be reassigned
+
+let a;
+console.log(a) //we will get undefined since it is there but don't know since created afterwards
+a = 50;
+console.log(a)
