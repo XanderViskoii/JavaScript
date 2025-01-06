@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Handsfree.js Hand Tracking</title>
+  <script src="https://unpkg.com/handsfree@8.5.1/build/lib/handsfree.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 20px;
+    }
+    .container {
+      position: relative;
+      display: inline-block;
+    }
+    #video {
+      display: block;
+      margin: 0 auto;
+      border: 1px solid #ccc;
+    }
+    #canvas {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      border: 1px solid #ccc;
+    }
+  </style>
+</head>
+<body>
+  <h1>Handsfree.js Hand Tracking</h1>
+  <div class="container">
+    <video id="video" width="640" height="480" ></video>
+    <canvas id="canvas" width="640" height="480"></canvas>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", async () => {
+      const handsfree = new Handsfree({
+        hands: {
+          enabled: true,
+          maxNumHands: 2,
+          minDetectionConfidence: 0.7,
+          minTrackingConfidence: 0.7
+        }
+      });
+
+      const video = document.getElementById('video');
+      const canvas = document.getElementById('canvas');
+      const ctx = canvas.getContext('2d');
+
+      async function startVideo() {
+        try {
+          const stream = await navigator.mediaDevices.getUserMedia({ 
+            video: { 
+              width: 640,
+              height: 480
+            } 
+          });
+          video.srcObject = stream;
+          await video.play();
+        } catch (err) {
+          console.error('Error accessing webcam:', err);
+          alert('Error accessing webcam. Please check permissions.');
+        }
+      }
+
+      await startVideo();
+      await handsfree.start();
+
+      handsfree.use('drawHands', (data) => {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        
+        if (!data.hands || !data.hands.landmarks) return;
+        
+        data.hands.landmarks.forEach((hand, handIndex) => {
+          hand.forEach((landmark) => {
+            const x = landmark.x * canvas.width;
+            const y = landmark.y * canvas.height;
+            
+            ctx.beginPath();
+            ctx.arc(x, y, 5, 0, Math.PI * 2);
+            ctx.fillStyle = handIndex === 0 ? 'red' : 'blue';
+            ctx.fill();
+          });
+        });
+      });
+    });
+  </script>
+</body>
+</html>
